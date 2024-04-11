@@ -11,7 +11,16 @@ def encoder_function(plain_text):
     return encoded_str
 
 #Decoder function goes here
-
+def decode_function(encoded):
+    decoded = ""
+    for i in encoded:
+        if int(i) > 2:
+            j = int(i) - 3
+            decoded += str(j)
+        else:
+            j = int(i) + 7
+            decoded += str(j)
+    return decoded
 
 def main():
     #Written by James Cross
