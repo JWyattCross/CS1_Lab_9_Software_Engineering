@@ -1,5 +1,14 @@
-
-#Encoder function goes here
+def encoder_function(plain_text):
+    #Written by James Cross
+    encoded_str = "" #empty string to hold encoded string
+    for i in plain_text: #loop through all characters
+        i = int(i) #cast current to int
+        i += 3 #shift cipher
+        if i >= 10: #check if rollover
+            i -= 10 #subtract
+        i = str(i) #cast to string to append
+        encoded_str += i #append to save variable
+    return encoded_str
 
 #Decoder function goes here
 
